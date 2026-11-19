@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Каталог туристического снаряжения — Тропа</title>
+<meta content="Палатки, рюкзаки, спальники, коврики, треккинговые палки и фонари. Фильтры по категории и цене за сутки." name="description"/>
+<meta content="Каталог туристического снаряжения — Тропа" property="og:title"/>
+<meta content="Палатки, рюкзаки, спальники, коврики, треккинговые палки и фонари. Фильтры по категории и цене за сутки." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="#244c3d" name="theme-color"/>
+<script src="js/theme-init.js"></script><link href="images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/custom.css" rel="stylesheet"/>
+<link href="css/features.css" rel="stylesheet"/></head>
+<body>
+<a class="visually-hidden-focusable skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header"><nav aria-label="Главная навигация" class="navbar navbar-expand-lg">
+<div class="container">
+<a aria-label="Тропа — главная" class="brand" href="index.html"><svg aria-hidden="true" fill="none" viewBox="0 0 44 36"><path d="M2 31 21 3l21 28H2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="2.7"></path><path d="m13 31 8-15 10 15M21 3v8" stroke="currentColor" stroke-linejoin="round" stroke-width="2.7"></path></svg>тропа</a>
+<div aria-label="Инструменты сайта" class="header-tools">
+<button aria-label="Включить тёмную тему" aria-pressed="false" class="tool-button js-shop-control" disabled="" id="themeToggle" title="Сменить тему" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M21 14a9 9 0 0 1-11-11 9 9 0 1 0 11 11Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></button>
+<button aria-label="Открыть избранное" class="tool-button js-shop-control" data-open-shop="favorites" disabled="" title="Избранное" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M20.5 5.5a5 5 0 0 0-7 0L12 7l-1.5-1.5a5 5 0 0 0-7 7L12 21l8.5-8.5a5 5 0 0 0 0-7Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg><span class="tool-counter" data-favorites-count="" hidden="">0</span></button>
+<button aria-label="Открыть корзину" class="tool-button js-shop-control" data-open-shop="cart" disabled="" title="Корзина" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M2 3h3l3 13h11l3-10H6" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path><circle cx="9" cy="20" fill="currentColor" r="1.5"></circle><circle cx="18" cy="20" fill="currentColor" r="1.5"></circle></svg><span class="tool-counter" data-cart-count="" hidden="">0</span></button>
+<button aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню" class="navbar-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button">☰</button></div><div class="collapse navbar-collapse" id="mainNavbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a aria-current="page" class="nav-link active" href="catalog.html">Снаряжение</a></li><li class="nav-item"><a class="nav-link" href="blog.html">С чего начать?</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+</ul></div>
+</div>
+</nav></header>
+<main class="page-bottom" id="main">
+<div class="container page-top"><nav aria-label="Хлебные крошки"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Главная</a></li><li aria-current="page" class="breadcrumb-item">Снаряжение</li></ol></nav><h1>Снаряжение для вашего маршрута</h1><p class="lead">Для ночёвки в лесу, выходных у озера и пеших троп. Выберите нужное, а даты укажите в карточке.</p></div>
+<div class="container">
+<form aria-label="Фильтры снаряжения" class="filter-panel" id="filters"><div class="row g-3">
+<div class="col-12 col-lg-4"><label class="form-label" for="fSearch">Что ищем?</label><input class="form-control" id="fSearch" maxlength="100" placeholder="Например, палатка" type="search"/></div>
+<div class="col-12 col-md-4 col-lg-3"><label class="form-label" for="fCategory">Категория</label><select class="form-select" id="fCategory"><option value="">Все категории</option><option value="tents">Палатки</option><option value="packs">Рюкзаки</option><option value="sleep">Для сна</option><option value="accessories">Аксессуары</option></select></div>
+<div class="col-6 col-md-4 col-lg-3"><label class="form-label" for="fSort">Порядок</label><select class="form-select" id="fSort"><option value="default">По умолчанию</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="name">По названию</option></select></div>
+<div class="col-6 col-md-4 col-lg-2"><label class="form-label" for="fPrice">Цена за сутки</label><select class="form-select" id="fPrice"><option value="">Любая</option><option value="150">До 150 ₽</option><option value="250">До 250 ₽</option><option value="500">До 500 ₽</option></select></div>
+</div><div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3"><span class="small text-muted">Залог не входит в стоимость. Наличие на даты требует подтверждения.</span><button class="btn btn-outline-primary btn-sm" type="reset">Сбросить фильтры</button></div></form>
+<noscript><p class="noscript-note">Все товары показаны ниже. Для фильтров включите JavaScript.</p></noscript>
+<div class="results-line"><span aria-live="polite" id="resultCount" role="status">Найдено: 6 из 6</span><a href="contacts.html#order">Нужна помощь с выбором?</a></div>
+<div class="row g-4" id="productGrid"><div class="col-12 col-md-6 col-lg-4" data-product-id="taiga-2">
+<article class="card product-card">
+<a aria-hidden="true" class="product-visual" href="equipment.html?id=taiga-2" tabindex="-1">
+<img alt="" height="420" loading="lazy" src="images/tent.svg" width="640"/>
+<span class="availability">В прокате</span>
+</a><button aria-label="В избранное: Палатка «Тайга 2»" aria-pressed="false" class="tool-button favorite-toggle js-shop-control" data-favorite="taiga-2" disabled="" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M20.5 5.5a5 5 0 0 0-7 0L12 7l-1.5-1.5a5 5 0 0 0-7 7L12 21l8.5-8.5a5 5 0 0 0 0-7Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></button>
+<div class="card-body"><p class="product-type">Палатки</p>
+<h3><a href="equipment.html?id=taiga-2">Палатка «Тайга 2»</a></h3>
+<p class="product-desc">Двухместная, 2,8 кг. Для ночёвки вдвоём с отдельным тамбуром для вещей.</p>
+<div class="product-bottom"><span class="price">450 ₽ <small>/ сутки</small></span>
+<a aria-label="Подробнее: Палатка «Тайга 2»" class="btn btn-outline-primary btn-sm" href="equipment.html?id=taiga-2">Подробнее</a>
+</div>
+<div class="product-actions"><button class="btn btn-primary btn-sm js-shop-control" data-add-cart="taiga-2" disabled="" type="button">В корзину</button></div></div>
+</article>
+</div><div class="col-12 col-md-6 col-lg-4" data-product-id="trail-60">
+<article class="card product-card">
+<a aria-hidden="true" class="product-visual" href="equipment.html?id=trail-60" tabindex="-1">
+<img alt="" height="420" loading="lazy" src="images/backpack.svg" width="640"/>
+<span class="availability">В прокате</span>
+</a><button aria-label="В избранное: Рюкзак «Перевал 60»" aria-pressed="false" class="tool-button favorite-toggle js-shop-control" data-favorite="trail-60" disabled="" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M20.5 5.5a5 5 0 0 0-7 0L12 7l-1.5-1.5a5 5 0 0 0-7 7L12 21l8.5-8.5a5 5 0 0 0 0-7Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></button>
+<div class="card-body"><p class="product-type">Рюкзаки</p>
+<h3><a href="equipment.html?id=trail-60">Рюкзак «Перевал 60»</a></h3>
+<p class="product-desc">60 литров, 1,7 кг. Регулируемая спинка и пояс, который разгружает плечи.</p>
+<div class="product-bottom"><span class="price">250 ₽ <small>/ сутки</small></span>
+<a aria-label="Подробнее: Рюкзак «Перевал 60»" class="btn btn-outline-primary btn-sm" href="equipment.html?id=trail-60">Подробнее</a>
+</div>
+<div class="product-actions"><button class="btn btn-primary btn-sm js-shop-control" data-add-cart="trail-60" disabled="" type="button">В корзину</button></div></div>
+</article>
+</div><div class="col-12 col-md-6 col-lg-4" data-product-id="night-plus5">
+<article class="card product-card">
+<a aria-hidden="true" class="product-visual" href="equipment.html?id=night-plus5" tabindex="-1">
+<img alt="" height="420" loading="lazy" src="images/sleeping-bag.svg" width="640"/>
+<span class="availability">В прокате</span>
+</a><button aria-label="В избранное: Спальник «Ночь +5»" aria-pressed="false" class="tool-button favorite-toggle js-shop-control" data-favorite="night-plus5" disabled="" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M20.5 5.5a5 5 0 0 0-7 0L12 7l-1.5-1.5a5 5 0 0 0-7 7L12 21l8.5-8.5a5 5 0 0 0 0-7Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></button>
+<div class="card-body"><p class="product-type">Для сна</p>
+<h3><a href="equipment.html?id=night-plus5">Спальник «Ночь +5»</a></h3>
+<p class="product-desc">Комфорт +5 °C, 1,3 кг. Синтетический утеплитель и регулируемый капюшон.</p>
+<div class="product-bottom"><span class="price">200 ₽ <small>/ сутки</small></span>
+<a aria-label="Подробнее: Спальник «Ночь +5»" class="btn btn-outline-primary btn-sm" href="equipment.html?id=night-plus5">Подробнее</a>
+</div>
+<div class="product-actions"><button class="btn btn-primary btn-sm js-shop-control" data-add-cart="night-plus5" disabled="" type="button">В корзину</button></div></div>
+</article>
+</div><div class="col-12 col-md-6 col-lg-4" data-product-id="forest-mat">
+<article class="card product-card">
+<a aria-hidden="true" class="product-visual" href="equipment.html?id=forest-mat" tabindex="-1">
+<img alt="" height="420" loading="lazy" src="images/mat.svg" width="640"/>
+<span class="availability">В прокате</span>
+</a><button aria-label="В избранное: Коврик «Лес»" aria-pressed="false" class="tool-button favorite-toggle js-shop-control" data-favorite="forest-mat" disabled="" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M20.5 5.5a5 5 0 0 0-7 0L12 7l-1.5-1.5a5 5 0 0 0-7 7L12 21l8.5-8.5a5 5 0 0 0 0-7Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></button>
+<div class="card-body"><p class="product-type">Для сна</p>
+<h3><a href="equipment.html?id=forest-mat">Коврик «Лес»</a></h3>
+<p class="product-desc">Пенный коврик, 400 г. Простой и прочный вариант для летних ночёвок.</p>
+<div class="product-bottom"><span class="price">100 ₽ <small>/ сутки</small></span>
+<a aria-label="Подробнее: Коврик «Лес»" class="btn btn-outline-primary btn-sm" href="equipment.html?id=forest-mat">Подробнее</a>
+</div>
+<div class="product-actions"><button class="btn btn-primary btn-sm js-shop-control" data-add-cart="forest-mat" disabled="" type="button">В корзину</button></div></div>
+</article>
+</div><div class="col-12 col-md-6 col-lg-4" data-product-id="ridge-poles">
+<article class="card product-card">
+<a aria-hidden="true" class="product-visual" href="equipment.html?id=ridge-poles" tabindex="-1">
+<img alt="" height="420" loading="lazy" src="images/poles.svg" width="640"/>
+<span class="availability">В прокате</span>
+</a><button aria-label="В избранное: Палки «Хребет»" aria-pressed="false" class="tool-button favorite-toggle js-shop-control" data-favorite="ridge-poles" disabled="" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M20.5 5.5a5 5 0 0 0-7 0L12 7l-1.5-1.5a5 5 0 0 0-7 7L12 21l8.5-8.5a5 5 0 0 0 0-7Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></button>
+<div class="card-body"><p class="product-type">Аксессуары</p>
+<h3><a href="equipment.html?id=ridge-poles">Палки «Хребет»</a></h3>
+<p class="product-desc">Пара телескопических палок. Длина 65–135 см, внешние зажимы.</p>
+<div class="product-bottom"><span class="price">150 ₽ <small>/ сутки</small></span>
+<a aria-label="Подробнее: Палки «Хребет»" class="btn btn-outline-primary btn-sm" href="equipment.html?id=ridge-poles">Подробнее</a>
+</div>
+<div class="product-actions"><button class="btn btn-primary btn-sm js-shop-control" data-add-cart="ridge-poles" disabled="" type="button">В корзину</button></div></div>
+</article>
+</div><div class="col-12 col-md-6 col-lg-4" data-product-id="camp-light">
+<article class="card product-card">
+<a aria-hidden="true" class="product-visual" href="equipment.html?id=camp-light" tabindex="-1">
+<img alt="" height="420" loading="lazy" src="images/lantern.svg" width="640"/>
+<span class="availability">В прокате</span>
+</a><button aria-label="В избранное: Фонарь «Стоянка»" aria-pressed="false" class="tool-button favorite-toggle js-shop-control" data-favorite="camp-light" disabled="" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M20.5 5.5a5 5 0 0 0-7 0L12 7l-1.5-1.5a5 5 0 0 0-7 7L12 21l8.5-8.5a5 5 0 0 0 0-7Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></button>
+<div class="card-body"><p class="product-type">Аксессуары</p>
+<h3><a href="equipment.html?id=camp-light">Фонарь «Стоянка»</a></h3>
+<p class="product-desc">Кемпинговый светильник с USB-зарядкой. Подвес для палатки и три режима.</p>
+<div class="product-bottom"><span class="price">120 ₽ <small>/ сутки</small></span>
+<a aria-label="Подробнее: Фонарь «Стоянка»" class="btn btn-outline-primary btn-sm" href="equipment.html?id=camp-light">Подробнее</a>
+</div>
+<div class="product-actions"><button class="btn btn-primary btn-sm js-shop-control" data-add-cart="camp-light" disabled="" type="button">В корзину</button></div></div>
+</article>
+</div></div>
+<div class="empty-state" hidden="" id="emptyState"><h2>Ничего не нашлось</h2><p>Попробуйте другое название или уберите ограничение по цене.</p><button class="btn btn-outline-primary" id="clearEmpty" type="button">Сбросить фильтры</button></div>
+</div>
+</main>
+<footer class="site-footer" id="siteFooter">
+<div class="container">
+<div class="row g-4 footer-columns">
+<div class="col-12 col-md-4 footer-brand">
+<a class="brand" href="index.html"><svg aria-hidden="true" fill="none" viewBox="0 0 44 36"><path d="M2 31 21 3l21 28H2Z" stroke="currentColor" stroke-linejoin="round" stroke-width="2.7"></path><path d="m13 31 8-15 10 15M21 3v8" stroke="currentColor" stroke-linejoin="round" stroke-width="2.7"></path></svg>тропа</a>
+<p class="footer-description">Прокат туристического снаряжения.<br/>Всё для вашей следующей ночёвки под звёздами.</p>
+<p class="footer-copyright">© 2026 «Тропа».<br/>Все права защищены.</p>
+</div>
+<nav aria-label="Навигация в подвале" class="col-12 col-md-4 footer-nav">
+<h2>Собираемся в поход</h2><a href="blog.html">С чего начать?</a>
+<a href="catalog.html">Каталог снаряжения</a>
+<a href="index.html#how">Как арендовать</a>
+</nav>
+<div class="col-12 col-md-4 footer-contact">
+<h2>Самовывоз и контакты</h2>
+<address class="footer-contact-details">
+<div class="footer-contact-item">
+<span class="contact-icon"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.7"></path><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.7"></circle></svg></span>
+<div><span class="contact-label">Пункт выдачи</span><span class="contact-address">Москва, ул. Лесная, д. 12</span></div>
+</div>
+<div class="footer-contact-item">
+<span class="contact-icon"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="m7 3 3 5-3 3c2 3 3 4 6 6l3-3 5 3-2 4C10 22 2 14 3 5Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
+<a class="footer-phone" href="tel:+78001234567">+7 (800) 123-45-67</a>
+</div>
+</address>
+<div aria-label="График работы: ежедневно с 10:00 до 20:00" class="footer-hours">
+<div class="hours-title"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 7v5l3 2" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg><span>График работы</span></div>
+<div class="hours-line"><span>Ежедневно</span><strong>10:00–20:00</strong></div>
+<p>Выдача и возврат по договорённости</p>
+</div><div class="footer-email"><span class="contact-icon"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><rect height="14" rx="2" stroke="currentColor" stroke-width="1.7" width="18" x="3" y="5"></rect><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg></span><a href="mailto:hello@tropa.example">hello@tropa.example</a></div><div aria-label="Мессенджеры" class="footer-socials" role="group">
+<a aria-label="Открыть MAX в новой вкладке" class="social-link social-link-max" href="https://max.ru/" rel="noopener noreferrer" target="_blank"><span class="social-icon social-icon-max"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M20.5 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-3.1-.6l-4.7 1 1.1-4.5A8.5 8.5 0 1 1 20.5 11.5Z" fill="currentColor"></path><path d="M8 11.7a4 4 0 0 1 8 0" stroke="#8274E9" stroke-linecap="round" stroke-width="2.1"></path></svg></span><span>MAX</span></a>
+<a aria-label="Открыть Telegram в новой вкладке" class="social-link social-link-telegram" href="https://t.me/" rel="noopener noreferrer" target="_blank"><span class="social-icon social-icon-telegram"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="m20.8 4.3-3.2 15.1c-.2 1.1-.9 1.4-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.2-8.3c.4-.4-.1-.6-.6-.3L5.1 13l-4.5-1.4c-1-.3-1-1 .2-1.5l17.7-6.8c.8-.3 1.6.2 1.3 1Z" fill="currentColor" transform="translate(1 1) scale(.95)"></path></svg></span><span>Telegram</span></a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<button aria-label="Вернуться к началу страницы" class="to-top" hidden="" id="toTop" title="К началу страницы" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 32 32"><path class="top-tent-canopy" d="m4 26 11-20 14 20H4Z" fill="currentColor" fill-opacity=".09" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="m15 6 6 20M9 26l6-12 4 12M3 27h27" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path><path d="m15 14 4 12H9l6-12Z" fill="currentColor" fill-opacity=".16"></path></svg></button>
+<dialog aria-labelledby="shopTitle" class="shop-dialog" id="shopDialog">
+<header class="drawer-header"><h2 id="shopTitle">Корзина</h2><button aria-label="Закрыть панель" class="close-button" id="shopClose" type="button">×</button></header>
+<div class="shop-body" id="shopBody"></div>
+</dialog>
+<div aria-live="polite" class="shop-toast" hidden="" id="shopToast" role="status"></div>
+<button aria-controls="consultantPanel" aria-expanded="false" aria-label="Открыть консультанта" class="consultant-toggle js-shop-control" disabled="" id="consultantToggle" title="Консультант" type="button"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M21 11.5a9 9 0 0 1-9 9 9 9 0 0 1-4-.9L3 21l1.4-4.5A9 9 0 1 1 21 11.5Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path><path d="M8 9h8m-8 4h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path></svg></button>
+<section aria-labelledby="chatTitle" class="consultant-panel" hidden="" id="consultantPanel" role="dialog">
+<header class="chat-header"><div><h2 id="chatTitle" tabindex="-1">Консультант «Тропы»</h2><p>Автопомощник по снаряжению и аренде</p></div><button aria-label="Закрыть консультанта" class="close-button" id="chatClose" type="button">×</button></header>
+<div aria-label="Сообщения консультанта" aria-live="polite" aria-relevant="additions" class="chat-log" id="chatLog" role="log"></div>
+<div aria-label="Быстрые вопросы" class="chat-quick"><button data-chat-question="Что взять в первый поход?" type="button">Первый поход</button><button data-chat-question="Как считаются цена и залог?" type="button">Цены и залог</button><button data-chat-question="Где самовывоз и какой график?" type="button">Самовывоз</button></div>
+<form class="chat-form" id="chatForm"><label class="visually-hidden" for="chatInput">Ваш вопрос</label><input autocomplete="off" class="form-control" id="chatInput" maxlength="500" placeholder="Спросите о снаряжении" type="text"/><button class="btn btn-primary" type="submit">Спросить</button></form>
+<a class="chat-contact" href="contacts.html#pickup">Контакты пункта проката</a>
+</section><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/store.js"></script><script src="js/app.js"></script><script src="js/features.js"></script>
+</body>
+</html>

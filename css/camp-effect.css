@@ -1,0 +1,24 @@
+/* Вечер в горах: локальная открытка, не переключатель темы сайта. */
+.camp-postcard { position: relative; isolation: isolate; overflow: hidden; border-radius: 14px 65px 14px 14px; background: #e4eee4; }
+.hero-art .camp-picture { display: block; width: 100%; height: auto; border-radius: 0; }
+.hero-art .camp-night-picture { position: absolute; inset: 0; height: 100%; opacity: 0; pointer-events: none; transition: opacity 1.4s ease-in-out; }
+.camp-postcard.is-night .camp-night-picture { opacity: 1; }
+.camp-evening-toggle { position: absolute; z-index: 1; left: 18px; bottom: 18px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; padding: 10px 15px; border: 1px solid #97ae9f; border-radius: 24px; background: #f7f9f7; color: #244c3d; font: 600 .83rem/1.3 "Segoe UI", sans-serif; cursor: pointer; transition: background-color .3s, color .3s, border-color .3s; }
+.camp-evening-toggle[hidden] { display: none; }
+.camp-evening-toggle svg { width: 18px; height: 18px; flex-shrink: 0; }
+.camp-evening-toggle:hover { background: #e6ede7; border-color: #244c3d; }
+.camp-evening-toggle:focus-visible { outline: 3px solid #eac56b; outline-offset: 4px; }
+.camp-postcard.is-night .camp-evening-toggle { background: #243d48; color: #f7e6af; border-color: #839599; }
+.camp-postcard.is-night .camp-evening-toggle:hover { background: #314f58; }
+.camp-day-icon, .is-night .camp-night-icon { display: none; }
+.is-night .camp-day-icon { display: block; }
+.camp-caption { min-height: 2.7em; }
+@media (max-width: 575.98px) {
+  .camp-postcard { border-radius: 10px 40px 10px 10px; }
+  .camp-evening-toggle { left: 12px; bottom: 12px; padding: 9px 13px; font-size: .78rem; }
+  .camp-caption { flex-direction: column; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .camp-night-picture, .camp-evening-toggle { transition: none !important; }
+}
+@media print { .camp-evening-toggle { display: none; } }
